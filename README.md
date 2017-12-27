@@ -1,16 +1,16 @@
 # CNV_engineering
 Copy number variations project. Engineering 22q11.21 deletion clones using CRISPR.
 
-GOAL: Identify all possible guides that meet the conditions for CNV engineering using CRISPR/Cas9 system
+**GOAL:** Identify all possible guides that meet the conditions for CNV engineering using CRISPR/Cas9 system
 
-REQUIRED FILES:
+**REQUIRED FILES:**
 - FASTA sequence file(s) containing target of interest
 - kmerDNA.py for computation (OBSOLETE)
 - kmerDNA2.py for computation
 
-USAGE: Run kmerDNA.py to find all possible CRISPR guides for a given sequence, with the option of applying SCORE method (Tai et al. 2016) to generate microdeletions/duplications by targeting segmental duplications
+**USAGE:** Run kmerDNA.py to find all possible CRISPR guides for a given sequence, with the option of applying SCORE method (*Tai et al.* 2016) to generate microdeletions/duplications by targeting segmental duplications
 
-NOTE: Method for dual guide design is outdated (no fuctionality to eliminate sequences with "TTTT" which interferes with transcription, and to screen for cloning incompatibility - BbsI cut sites)
+**NOTE:** Method for dual guide design is outdated (no fuctionality to eliminate sequences with "TTTT" which interferes with transcription, and to screen for cloning incompatibility - BbsI cut sites)
 
 
 ## DETAILED INSTRUCTIONS:
@@ -26,4 +26,4 @@ NOTE: Method for dual guide design is outdated (no fuctionality to eliminate seq
 10. min/maxDupB = indices denoting the endpoints of LCR 2
 11. The output CSV file should contain the guide sequences, indices of guide target 1 (positive = 5' to 3' sense; negative = 5' to 3' antisense strand), indices of guide target 2, and distances between the targets.
 
-I highly recommend extracting the hg19 and hg38 sequences for the CNV region of interest and running the scoreGuideDesign function on both. You can then use the findOverlap function to identify guides present in both files, ultimately ones that fit both assemblies. Command: findOverlap("CSVfile1", "CSVfile2").
+Highly recommend extracting the hg19 and hg38 sequences for the CNV region of interest and running the scoreGuideDesign function on both. You can then use the findOverlap function to identify guides present in both files, ultimately ones that fit both assemblies. Command: findOverlap("CSVfile1", "CSVfile2").
