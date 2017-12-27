@@ -1,4 +1,4 @@
-# CNV
+# CNV_engineering
 Copy number variations project. Engineering 22q11.21 deletion clones using CRISPR.
 
 GOAL: Identify all possible guides that meet the conditions for CNV engineering using CRISPR/Cas9 system
@@ -8,7 +8,7 @@ REQUIRED FILES:
 - kmerDNA.py for computation (OBSOLETE)
 - kmerDNA2.py for computation
 
-USAGE: Run kmerDNA.py to find all possible CRISPR guides for a given sequence, with the option of applying SCORE method (Tai et al 2016) to generate microdeletions/duplications by targeting segmental duplications
+USAGE: Run kmerDNA.py to find all possible CRISPR guides for a given sequence, with the option of applying SCORE method (Tai et al. 2016) to generate microdeletions/duplications by targeting segmental duplications
 
 NOTE: Method for dual guide design is outdated (no fuctionality to eliminate sequences with "TTTT" which interferes with transcription, and to screen for cloning incompatibility - BbsI cut sites)
 
